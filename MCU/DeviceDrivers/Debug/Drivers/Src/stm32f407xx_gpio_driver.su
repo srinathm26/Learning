@@ -1,0 +1,9 @@
+../Drivers/Src/stm32f407xx_gpio_driver.c:12:6:GPIO_PCLK_CTRL	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:58:6:GPIO_Init	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:65:9:GPIO_ReadIPPin	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:68:10:GPIO_ReadIPPort	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:71:6:GPIO_WriteOPPin	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:74:6:GPIO_WriteOPPort	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:77:6:GPIO_ToggleOPPin	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:83:6:GPIO_IRQ_Config	16	static
+../Drivers/Src/stm32f407xx_gpio_driver.c:86:6:GPIO_IRQ_Handling	16	static
