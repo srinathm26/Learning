@@ -1,20 +1,10 @@
-00:33:04 **** Incremental Build of configuration Debug for project Dev_DeviceDrivers ****
+20:16:13 **** Incremental Build of configuration Debug for project Dev_DeviceDrivers ****
 make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "Dev_DeviceDrivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/srinathm/MySpace/Learning/MCU/Dev_DeviceDrivers/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Dev_DeviceDrivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Dev_DeviceDrivers.elf
- 
 arm-none-eabi-size  Dev_DeviceDrivers.elf 
-arm-none-eabi-objdump -h -S Dev_DeviceDrivers.elf  > "Dev_DeviceDrivers.list"
    text	   data	    bss	    dec	    hex	filename
     652	      0	   1568	   2220	    8ac	Dev_DeviceDrivers.elf
 Finished building: default.size.stdout
  
-Finished building: Dev_DeviceDrivers.list
- 
 
-00:33:04 Build Finished. 0 errors, 0 warnings. (took 332ms)
+20:16:13 Build Finished. 0 errors, 0 warnings. (took 120ms)
 

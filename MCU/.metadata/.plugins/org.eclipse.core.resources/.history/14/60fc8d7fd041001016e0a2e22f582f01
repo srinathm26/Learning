@@ -1,0 +1,105 @@
+/*
+ * stm32f407xx_gpio_driver.c
+ *
+ *  Created on: Jun 5, 2025
+ *      Author: srinathm
+ */
+
+#include "Inc/stm32f407xx.h"
+#include "Inc/stm32f407xx_gpio_driver.h"
+
+
+//....GPIO clock Control API
+void GPIO_PCLK_CTRL(GPIO_RegDef_t *pGPIOx, uint8_t CLKValue){
+
+	if(CLKValue == ENABLE){
+		if(pGPIOx == GPIOA)
+			GPIOA_PCLK_EN();
+		else if(pGPIOx == GPIOB)
+			GPIOB_PCLK_EN();
+		else if(pGPIOx == GPIOC)
+			GPIOC_PCLK_EN();
+		else if(pGPIOx == GPIOD)
+			GPIOD_PCLK_EN();
+		else if(pGPIOx == GPIOE)
+			GPIOE_PCLK_EN();
+		else if(pGPIOx == GPIOF)
+			GPIOF_PCLK_EN();
+		else if(pGPIOx == GPIOG)
+			GPIOG_PCLK_EN();
+		else if(pGPIOx == GPIOH)
+			GPIOH_PCLK_EN();
+		else if(pGPIOx == GPIOI)
+			GPIOI_PCLK_EN();
+	}
+	else{
+		if(pGPIOx == GPIOA)
+				GPIOA_PCLK_DI();
+			else if(pGPIOx == GPIOB)
+				GPIOB_PCLK_DI();
+			else if(pGPIOx == GPIOC)
+				GPIOC_PCLK_DI();
+			else if(pGPIOx == GPIOD)
+				GPIOD_PCLK_DI();
+			else if(pGPIOx == GPIOE)
+				GPIOE_PCLK_DI();
+			else if(pGPIOx == GPIOF)
+				GPIOF_PCLK_DI();
+			else if(pGPIOx == GPIOG)
+				GPIOG_PCLK_DI();
+			else if(pGPIOx == GPIOH)
+				GPIOH_PCLK_DI();
+			else if(pGPIOx == GPIOI)
+				GPIOI_PCLK_DI();
+	}
+}
+//....
+
+//....GPIO Init/De-Init APIs
+void GPIO_Init(GPIO_Handle_t *pGPIOHandle){
+
+		if(pGPIOHandle->PinConfig.PinMode <= GPIO_MODE_ANALOG){
+			pGPIOHandle->pGPIOx->MODER |= (pGPIOHandle->PinConfig.PinMode << (2*pGPIOHandle->PinConfig.PinNumber));
+		}
+		if(pGPIOHandle->PinConfig.PinSpeed <= GPIO_OP_SPEED_VHI){
+			pGPIOHandle->pGPIOx->OSPEEDR |= (pGPIOHandle->PinConfig.PinSpeed << (2*pGPIOHandle->PinConfig.PinNumber));
+		}
+		if(pGPIOHandle->PinConfig.PinOPtype <= GPIO_OP_TYPE_OD){
+			pGPIOHandle->pGPIOx->ODR |= (pGPIOHandle->PinConfig.PinOPtype << (pGPIOHandle->PinConfig.PinNumber));
+		}
+		if(pGPIOHandle->PinConfig.PinPuPdControl <= GPIO_PULL_DOWN){
+			pGPIOHandle->pGPIOx->PUPDR |= (pGPIOHandle->PinConfig.PinPuPdControl << (2*pGPIOHandle->PinConfig.PinNumber));
+		}
+
+
+
+}
+void GPIO_De_Init(GPIO_RegDef_t *pGPIOx);
+//....
+
+//....GPIO Read/Write APIs
+uint8_t GPIO_ReadIPPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber){
+	return 0;
+}
+uint16_t GPIO_ReadIPPort(GPIO_RegDef_t *pGPIOx){
+	return 0;
+}
+void GPIO_WriteOPPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value){
+
+}
+void GPIO_WriteOPPort(GPIO_RegDef_t *pGPIOx, uint16_t Value){
+
+}
+void GPIO_ToggleOPPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber){
+
+}
+//....
+
+//....GPIO IRQ APIs
+void GPIO_IRQ_Config(uint8_t IRQNumber, uint8_t IRQPriority, uint8_t value){
+
+}
+void GPIO_IRQ_Handling(uint8_t PinNumber){
+
+}
+//....
