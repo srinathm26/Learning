@@ -1,7 +1,7 @@
-20:16:13 **** Incremental Build of configuration Debug for project Dev_DeviceDrivers ****
-make -j9 all 
-arm-none-eabi-size  Dev_DeviceDrivers.elf 
+16:18:35 **** Incremental Build of configuration Debug for project DeviceDrivers ****
+make -j16 all 
+arm-none-eabi-size  DeviceDrivers.elf 
    text	   data	    bss	    dec	    hex	filename
-    652	      0	   1568	   2220	    8ac	Dev_DeviceDrivers.elf
+    736	      0	   1568	   2304	    900	DeviceDrivers.elf
 Finished building: default.size.stdout
  

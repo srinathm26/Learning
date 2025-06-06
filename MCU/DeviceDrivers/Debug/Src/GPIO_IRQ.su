@@ -1,0 +1,2 @@
+../Src/GPIO_IRQ.c:12:5:main	4	static
+../Src/GPIO_IRQ.c:16:6:EXTI0_IRQHandler	8	static
